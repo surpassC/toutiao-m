@@ -5,9 +5,39 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    name: 'home',
+    name: 'index',
     path: '/',
-    component: () => import('@/views/home')
+    component: () => import('@/views/layout/'),
+    children: [
+      {
+        // 首页
+        name: 'home',
+        path: '',
+        component: () => import('@/views/home/')
+      },
+      {
+        // 问答
+        name: 'qa',
+        path: 'qa',
+        component: () => import('@/views/qa/')
+      },
+      {
+        // 视频
+        name: 'video',
+        path: 'video',
+        component: () => import('@/views/video/')
+      },
+      {
+        // 首页
+        name: 'my',
+        path: 'my',
+        component: () => import('@/views/my/')
+      }
+    ]
+  }, {
+    name: 'login',
+    path: '/login',
+    component: () => import('@/views/login/')
   }
 ]
 

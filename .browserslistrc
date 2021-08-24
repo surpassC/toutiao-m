@@ -1,3 +1,14 @@
-> 1%
-last 2 versions
-not dead
+
+# 兼容到超过1%的用户使用的浏览器
+# > 1%
+
+# 兼容到最后的两个版本
+#last 2 versions
+
+# not dead
+
+# 配置要兼容的浏览器版本
+
+Android >= 4.0
+
+IOS >= 8
